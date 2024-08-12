@@ -9,7 +9,7 @@ function AllCards() {
     const [data, setData] = useState([])
     const allData = useSelector(state => state.posts);
     useEffect(() => {
-        allData ? setData(allData) : axios.get('http://localhost:4000/api/post/get-questions').then(res => {
+        allData ? setData(allData) : axios.get('https://tufcards.onrender.com/api/post/get-questions').then(res => {
             setData(res.data);
             dispatch(setCards(res.data));
         })

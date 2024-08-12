@@ -15,7 +15,7 @@ function Home() {
     allData
       ? setData(allData)
       : axios
-          .get("http://localhost:4000/api/post/get-questions")
+          .get("https://tufcards.onrender.com/api/post/get-questions")
           .then((res) => {
             console.log(res.data);
             setData(res.data);

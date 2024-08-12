@@ -14,7 +14,7 @@ const { register, handleSubmit } = useForm();
 
   useEffect(() => {
     axios
-    .get("http://localhost:4000/api/post/get-questions")
+    .get("https://tufcards.onrender.com/api/post/get-questions")
     .then( res => {
       // console.log(res.data);  
       dispatch(setCards(res.data));
